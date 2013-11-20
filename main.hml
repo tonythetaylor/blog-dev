@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+      <title>Gridly</title>
+
+      <link rel="stylesheet" type="text/css" href="jquery.pageslide.css">
+      <link href='jquery.gridly.css' rel='stylesheet' type='text/css'>
+      <link href='sample.css' rel='stylesheet' type='text/css'>
+      <link href='common.css' rel='stylesheet' type='text/css'>     
+      <script type="text/javascript" src="jquery-2.0.3.js"></script>
+      <script src='jquery.gridly.js' type='text/javascript'></script>
+      <script src='sample.js' type='text/javascript'></script>
+
+       
+<style type='text/css'>
+
+</style>
+
+
+<script type="text/javascript">
+$(window).load(function(){
+
+
+$(function() {
+    
+    var nav = $('#navWrap');
+    var navHomeY = nav.offset().top;
+    var isFixed = false;
+    var $w = $(window);
+    $w.scroll(function() {
+        var scrollTop = $w.scrollTop();
+        var shouldBeFixed = scrollTop > navHomeY;
+        if (shouldBeFixed && !isFixed) {
+            nav.css({
+                position: 'fixed',
+                top: 0,
+                left: nav.offset().left,
+                width: nav.width()
+            });
+            isFixed = true;
+        }
+        else if (!shouldBeFixed && isFixed)
+        {
+            nav.css({
+                position: 'static'
+            });
+            isFixed = false;
+        }
+    });
+
+
+});
+
+</script>
+
+<script>
+function sendText(e) {
+	var txtValue = document.getElementById('txt').value;
+	document.getElementById('myDiv').innerText = txtValue;
+        e.preventDefault;
+        return false;
+ }
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.update').click(
+            function (){
+                
+                box();
+                update(); }
+        );
+    });
+
+
+  function update()
+                 
+{
+    $("#t").prepend('<li>' + $('.update-it input').val() + '</li>');
+    
+}
+
+function box()
+{
+$("input:text").each(function ()
+{
+    // store default value
+    var v = this.value;
+    var b = this.clearv;
+    $(this).blur(function ()
+    {
+        // if input is empty, reset value to default 
+        if (this.value.length == 0) this.value = v;
+      
+    }).focus(function ()
+    {
+        // when input is focused, clear its contents
+        this.value = "";
+    }); 
+});
+
+}
+</script>
+  </head>
+  <body>
+
+<div id="wrap">
+<div id="header">
+ <div id="logo"></div>   
+    <div id="navWrap">
+    <div id="nav">
+        <ul>
+            <li><a href="_secondary.html" class="smoothScroll">Grid</a></li>
+            <li><a href="#2" class="smoothScroll">Blog</a></li>
+            <li><a href="#3" class="smoothScroll">Tag</a></li>
+                <li>       </li>
+<li><div id="search">
+				
+             
+    <form class="text" id="cse-search-box" action="http://www.centralstate.edu/_results.php">
+ 
+    <input type="hidden" value="008473192255364263472:ad2xzfajkbm" name="cx">
+    <input type="hidden" value="FORID:10" name="cof">
+    <input type="hidden" value="UTF-8" name="ie">
+    <input type="text" size="20" name="q">
+    <span class="submit">
+    <input type="submit" value="Search" name="sa">
+    </span>
+
+</form>
+			</div></li>
+        </ul>    
+      
+    </div>
+</div>
+</div>
+
+      <section class='example'>
+        <div class='gridly'>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+        <ul id="t">
+          <li id="chat">
+         <div class="update-here" id="log"></div>
+         </li>    
+       </ul>
+
+        </div>
+         <!--   <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+          <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+          </div>
+
+
+ <div class='brick small'>
+            <a class='delete' href='#'>&times;</a>
+
+  </div> -->
+
+
+
+        </div>
+              </section>
+
+</div>
+
+<div id="widget"> 
+
+<div id="intro-wrap">
+<div class="open-intro">-</div>
+<div class="close-intro">+</div>
+    <div id="contentWrap">
+
+    <h1 class="main-header">Dashboard</h1>
+
+
+
+
+
+
+ <!-- The file upload form used as target for the file upload widget -->
+    <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
+        <!-- Redirect browsers with JavaScript disabled to the origin page -->
+        <noscript><input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/"></noscript>
+        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+        <div class="row fileupload-buttonbar">
+            <div class="col-lg-7">
+                <!-- The fileinput-button span is used to style the file input field as button -->
+                <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>Add stuff...</span>
+                    <input type="file" name="files[]" multiple>
+                </span>
+                <button type="submit" class="btn btn-primary start">
+                    <i class="glyphicon glyphicon-upload"></i>
+                    <span>Start upload</span>
+                </button>
+                <button type="reset" class="btn btn-warning cancel">
+                    <i class="glyphicon glyphicon-ban-circle"></i>
+                    <span>Cancel upload</span>
+                </button>
+                <button type="button" class="btn btn-danger delete">
+                    <i class="glyphicon glyphicon-trash"></i>
+                    <span>Delete</span>
+                </button>
+                <input type="checkbox" class="toggle">
+                <!-- The global file processing state -->
+                <span class="fileupload-process"></span>
+            </div>
+            <!-- The global progress state -->
+            <div class="col-lg-5 fileupload-progress fade">
+                <!-- The global progress bar -->
+                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                </div>
+                <!-- The extended global progress state -->
+                <div class="progress-extended">&nbsp;</div>
+            </div>
+        </div>
+
+                <!-- The status update -->
+	<center>
+		<div class="update-it">
+  			<p>What's in your box?!</p> 
+  			<input type="text" name="update" id="txt"/>
+			<input class="update" type="button" value="Start a box" />
+		</div>
+
+	</center>
+ <p class='actions'>
+          <a class='add button' href='#'>Add</a>
+        </p>
+<a href="_secondary.html" class="first button">Dashboard</a>
+<a href="#modal" class="second button" align="center" >User Settings</a>
+<div id="modal" style="display:none">
+    <h2>Username</h2>
+    <a href="javascript:$.pageslide.close()">Close</a>
+</div>
+
+
+
+        <!-- The table listing the files available for upload/download -->
+        <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+    </form>
+        </div>
+</div>
+
+
+<div id="footer">
+
+
+
+
+
+<script type="text/javascript" src="jquery.pageslide.js"></script>
+<a href="_secondary.html" class="first">~Dashboard</a>
+<script>
+    $("a.first").pageslide();
+$('.open-intro').click(function() {
+    $('#intro-wrap').animate({
+    opacity: 1,
+    bottom: '-140',
+  }, 500, function() {
+    // Animation complete.
+  });
+    $('.open-intro').hide();
+    $('.close-intro').show();
+});
+
+
+$('.close-intro').click(function() {
+    $('#intro-wrap').animate({
+    //opacity: 0.25,
+    bottom: '0',
+  }, 400, function() {
+    // Animation complete.
+  });
+    $('.open-intro').show();
+    $('.close-intro').hide();
+});
+</script>
+<a href="#modal" class="second" align="center" >~User Settings</a>
+<div id="modal" style="display:none">
+    <h2>Username</h2>
+    <a href="javascript:$.pageslide.close()">Close</a>
+</div>
+<script>
+    $(".second").pageslide({ direction: "left", modal: true });
+</script>
+
+</div>
+
+</div>
+
+
+</body>
+</html>
