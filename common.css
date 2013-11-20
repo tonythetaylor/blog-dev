@@ -1,0 +1,136 @@
+#header {
+      height: 50px;
+      width: 100%;
+      top:0;
+      left:0;
+      position:fixed;
+      z-index: 10000;
+      border-bottom: 1px;
+      opacity: 0.9;
+      background: rgba(0,0,0,.8);
+
+}
+#footer {
+        z-index: 10000;
+        background-color: #20B2AA;
+        height: 30px;
+        width: 100%;
+        left:0;
+        bottom:0px;
+	text-align: center;
+        position:fixed;
+        opacity: 0.7;
+
+}
+#wrap {
+   margin: 50px auto;        
+   background: transparent;
+   padding: 10px;
+   width: 750px;
+}
+#logo {
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    font-size: 30px;
+    left: 700px;
+    line-height: 40em;
+    padding: 75px 100px 0 30px;
+    position: fixed;
+    top: -10px;
+    z-index: 10000;
+}
+#navWrap {
+   height: 30px;
+   top:0;
+   position:fixed;
+   z-index: 10000;
+   left:335px;
+}
+#nav {
+   padding: 15px;
+   background: transparent;
+   height: 50px;
+       
+}
+#nav ul {
+   margin: 0;
+   padding: 0;    
+}
+#nav li {
+   float: left;
+   padding: 1px 2px;
+   background-color: transparent;
+   margin: 0 10px 0 0;
+   color: #F00;
+   list-style-type: none;
+}
+#nav li a {
+   color: #fff;  
+   text-decoration: none;    
+}
+#nav li a:hover {
+   text-decoration: underline;   
+}
+#intro-wrap {
+    position: relative;
+    z-index: 100001;
+    border-left: 1px solid rgba(0,0,0,.2);
+    width: 100%;
+    bottom:-140px;
+}
+#contentWrap{
+    background: rgba(0,0,0,.8);
+    padding: 15px 40px 25px 30px;
+}
+
+#intro-wrap h1 {
+    font-family: "PT Sans Narrow";
+    font-size: 25px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0px !important;
+    padding-bottom: 10px;
+}
+
+#intro-wrap p {
+    line-height: 19px;
+    color: #999;
+}
+.open-intro,
+.close-intro {
+    position:absolute;
+    left:175px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    z-index: 50;
+    padding-left:15px;
+}
+.open-intro {
+    display: none;
+    background: yellow 
+}
+.close-intro {
+    background: red; 
+}
+
+#widget {
+        z-index: 10001;
+        height: -140px;
+        width: 100%;
+        left:0;
+        bottom:0px;
+	text-align: center;
+        position:fixed;
+}
+.update-it { 
+             width: 150px;
+    
+}
+.update-it input { width: 150px; }
+
+#t li {
+    width:150px;
+    list-style-type: none;
+    overflow:auto;
+}
